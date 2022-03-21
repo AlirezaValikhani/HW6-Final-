@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.sql.Time;
 
 public class Transaction {
+    private Long id;
     private String accountNumber;
     private String originCardNumber;
     private String destinationCardNumber;
@@ -12,7 +13,8 @@ public class Transaction {
     private Time time;
     private TransactionType transactionType;
 
-    public Transaction(String accountNumber, String originCardNumber, String destinationCardNumber, String amount, Date date, Time time, TransactionType transactionType) {
+    public Transaction(Long id, String accountNumber, String originCardNumber, String destinationCardNumber, String amount, Date date, Time time, TransactionType transactionType) {
+        this.id = id;
         this.accountNumber = accountNumber;
         this.originCardNumber = originCardNumber;
         this.destinationCardNumber = destinationCardNumber;
@@ -20,6 +22,17 @@ public class Transaction {
         this.date = date;
         this.time = time;
         this.transactionType = transactionType;
+    }
+
+    public Transaction() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getAccountNumber() {

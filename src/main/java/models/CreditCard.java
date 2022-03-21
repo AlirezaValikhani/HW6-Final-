@@ -19,6 +19,14 @@ public class CreditCard {
         this.accountType = accountType;
     }
 
+    public String getExpireDate() {
+        return expireDate;
+    }
+
+    public void setExpireDate(String expireDate) {
+        this.expireDate = expireDate;
+    }
+
     public Long getId() {
         return id;
     }
